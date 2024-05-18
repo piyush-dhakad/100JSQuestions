@@ -1,10 +1,17 @@
 const CheckTringelType = (L,B,H) => {
-    let total = L*3;
-    if(L === total) {
+    // let total = L*3;
+    // if(L === total) {
+    //     return 'ecuilateral';
+    // } else if(L === B || L == H || B === H) {
+    //     return 'isosceles';
+    // } else { 
+    //     return 'scalene';
+    // }
+    if(L === B && L === H) {
         return 'ecuilateral';
-    } else if(L === B || L == H || B === H) {
+    } else if(L == B || B == H || H == L) {
         return 'isosceles';
-    } else { 
+    } else {
         return 'scalene';
     }
 }
